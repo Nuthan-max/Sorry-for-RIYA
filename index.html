@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Small Message 🌙</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="stars"></div>
+
+<img src="assets/moon.png" class="moon" alt="Moon">
+
+<div class="container">
+
+    <!-- Page 1 -->
+    <div class="page active" id="page1">
+
+        <p class="top">🌙 Just 30 seconds...</p>
+
+        <h1>Hey Riya,</h1>
+
+        <p class="text">
+            I made something.<br><br>
+            Would you like to see it?
+        </p>
+
+        <button id="openBtn">Open 💌</button>
+
+    </div>
+
+    <!-- Page 2 -->
+    <div class="page" id="page2">
+
+        <img src="assets/teddy.gif" class="teddy" alt="Teddy">
+
+        <h2>Hi... 🥹</h2>
+
+        <p class="text">
+            I think someone is a little mad at me.
+        </p>
+
+        <button id="next1">Continue →</button>
+
+    </div>
+
+    <!-- Page 3 -->
+    <div class="page" id="page3">
+
+        <h2>One Small Confession</h2>
+
+        <p id="typing"></p>
+
+        <button id="next2" style="display:none;">Next →</button>
+
+    </div>
+
+    <!-- Page 4 -->
+    <div class="page" id="page4">
+
+        <h2>Okay... You were right. 🥹</h2>
+
+        <p class="text">
+            I shouldn't have said Goodnight...<br><br>
+
+            if I was going to stay awake till 4.<br><br>
+
+            That one was completely my mistake.
+        </p>
+
+        <button id="next3">One Last Thing 🌙</button>
+
+    </div>
+
+    <!-- Page 5 -->
+    <div class="page" id="page5">
+
+        <h2>Promise?</h2>
+
+        <p class="text">
+            From now on...<br><br>
+
+            Goodnight means Goodnight.<br><br>
+
+            No fake goodnights. 🤍
+        </p>
+
+        <div class="buttons">
+            <button id="yesBtn">We're Good 😊</button>
+            <button id="noBtn">Still Mad 🙄</button>
+        </div>
+
+    </div>
+
+    <!-- Page 6 -->
+    <div class="page" id="page6">
+
+        <h1>🥹</h1>
+
+        <h2>Case Closed.</h2>
+
+        <p class="text">
+            Thank you.<br><br>
+
+            Now don't stay mad for too long. 🌙
+        </p>
+
+    </div>
+
+</div><audio id="bgMusic" loop>
+    <source src="assets/music.mp3" type="audio/mpeg">
+</audio>
+
+<script src="script.js"></script>
+
+</body>
+</html>

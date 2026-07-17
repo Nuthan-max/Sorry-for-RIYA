@@ -1,0 +1,222 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+body{
+background:linear-gradient(180deg,#07111f,#10223d,#19385e);
+height:100vh;
+overflow:hidden;
+display:flex;
+justify-content:center;
+align-items:center;
+color:white;
+position:relative;
+}
+
+.stars{
+position:absolute;
+width:100%;
+height:100%;
+background-image:
+radial-gradient(2px 2px at 10% 20%,white,transparent),
+radial-gradient(2px 2px at 80% 15%,white,transparent),
+radial-gradient(2px 2px at 60% 70%,white,transparent),
+radial-gradient(2px 2px at 30% 80%,white,transparent),
+radial-gradient(2px 2px at 90% 60%,white,transparent),
+radial-gradient(2px 2px at 45% 35%,white,transparent),
+radial-gradient(2px 2px at 70% 40%,white,transparent),
+radial-gradient(2px 2px at 20% 55%,white,transparent),
+radial-gradient(2px 2px at 15% 90%,white,transparent),
+radial-gradient(2px 2px at 95% 25%,white,transparent);
+animation:twinkle 3s infinite alternate;
+}
+
+.moon{
+position:absolute;
+top:60px;
+right:70px;
+width:120px;
+opacity:.9;
+animation:moonFloat 5s ease-in-out infinite;
+filter:drop-shadow(0 0 25px rgba(255,255,220,.6));
+}
+
+.container{
+width:92%;
+max-width:430px;
+padding:35px;
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(18px);
+border-radius:28px;
+border:1px solid rgba(255,255,255,.15);
+text-align:center;
+z-index:10;
+box-shadow:0 25px 60px rgba(0,0,0,.35);
+}
+
+.page{
+display:none;
+animation:fade .6s ease;
+}
+
+.page.active{
+display:block;
+}
+
+.top{
+letter-spacing:2px;
+font-size:14px;
+opacity:.85;
+margin-bottom:18px;
+}
+
+h1,h2{
+margin-bottom:18px;
+}
+
+.text{
+line-height:1.8;
+font-size:18px;
+margin-bottom:28px;
+color:#f1f1f1;
+}button{
+padding:14px 32px;
+border:none;
+border-radius:50px;
+background:white;
+color:#0d1b2a;
+font-size:17px;
+font-weight:600;
+cursor:pointer;
+transition:.3s;
+margin-top:10px;
+}
+
+button:hover{
+transform:scale(1.06);
+}
+
+.buttons{
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
+margin-top:20px;
+}
+
+#noBtn{
+position:relative;
+}
+
+.teddy{
+width:160px;
+margin-bottom:15px;
+animation:bounce 2.5s infinite;
+}
+
+#typing{
+font-size:18px;
+line-height:1.8;
+min-height:180px;
+white-space:pre-line;
+margin-bottom:30px;
+}
+
+@keyframes fade{
+
+from{
+opacity:0;
+transform:translateY(30px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+@keyframes bounce{
+
+0%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-12px);
+}
+
+100%{
+transform:translateY(0);
+}
+
+}
+
+@keyframes moonFloat{
+
+0%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-10px);
+}
+
+100%{
+transform:translateY(0px);
+}
+
+}
+
+@keyframes twinkle{
+
+0%{
+opacity:.4;
+}
+
+100%{
+opacity:1;
+}
+
+}
+
+@media(max-width:500px){
+
+.container{
+padding:28px 22px;
+}
+
+h1{
+font-size:30px;
+}
+
+h2{
+font-size:26px;
+}
+
+.text{
+font-size:16px;
+}
+
+.moon{
+width:90px;
+top:30px;
+right:20px;
+}
+
+.teddy{
+width:130px;
+}
+
+button{
+width:100%;
+}
+
+.buttons{
+flex-direction:column;
+}
+
+}
